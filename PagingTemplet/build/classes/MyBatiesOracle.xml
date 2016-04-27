@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>						
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--
+	开发环境 ：development
+	工作环境： work
+	-->
+<!-- 	<typeAliases>
+		<typeAlias type="com.nings.dao.MCUtilitiesExpenseItemMapper" alias="_student"/>
+	</typeAliases> -->
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@20.100.17.69:1521:mca" />
+				<property name="username" value="eip" />
+				<property name="password" value="eip" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/nings/dao/MCUtilitiesExpenseItemMapper.xml"/>
+	</mappers>
+
+</configuration>
